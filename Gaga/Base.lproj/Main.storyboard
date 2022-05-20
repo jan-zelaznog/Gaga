@@ -23,16 +23,16 @@
             </objects>
             <point key="canvasLocation" x="20" y="84"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Lady Gaga-->
         <scene sceneID="8eb-hZ-SBg">
             <objects>
-                <tableViewController id="naz-yZ-1Mp" sceneMemberID="viewController">
+                <tableViewController id="naz-yZ-1Mp" customClass="TableViewController" customModule="Gaga" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bgX-36-dv6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hRg-Rb-Qyc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="hRg-Rb-Qyc">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hRg-Rb-Qyc" id="7Ke-cm-457">
@@ -46,11 +46,30 @@
                             <outlet property="delegate" destination="naz-yZ-1Mp" id="xxh-sD-tws"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Gsb-Ek-UP2"/>
+                    <navigationItem key="navigationItem" title="Lady Gaga" id="Gsb-Ek-UP2"/>
+                    <connections>
+                        <segue destination="FPX-Ke-HNI" kind="show" identifier="showPict" id="JgG-WZ-EUd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SY-EG-IVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1714" y="84"/>
+        </scene>
+        <!--Pict View Controller-->
+        <scene sceneID="dPv-nm-MHZ">
+            <objects>
+                <viewController id="FPX-Ke-HNI" customClass="PictViewController" customModule="Gaga" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AdJ-m2-WFf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="To6-Ly-eAL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K0m-W8-w0Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdf-93-C5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="biq-MD-hmu">

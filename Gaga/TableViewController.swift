@@ -22,24 +22,19 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return DataManager.instance.info.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let item = DataManager.instance.info[indexPath.row]
+        cell.textLabel?.text = item.title
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,14 +71,19 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showPict", sender: nil)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let vc = segue.destination as! PictViewController
         // Pass the selected object to the new view controller.
+        let item = DataManager.instance.info[tableView.indexPathForSelectedRow!.row]
+        vc.item = item
     }
-    */
 
 }

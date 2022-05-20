@@ -15,6 +15,7 @@
 		3DCA3E9128383BB400D9A065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA3E8F28383BB400D9A065 /* LaunchScreen.storyboard */; };
 		3DCA3E9928383CB200D9A065 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9828383CB200D9A065 /* DataManager.swift */; };
 		3DCA3E9B2838457100D9A065 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9A2838457100D9A065 /* TableViewController.swift */; };
+		3DCA3E9D28384A8700D9A065 /* PictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9C28384A8700D9A065 /* PictViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3DCA3E9228383BB400D9A065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DCA3E9828383CB200D9A065 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3DCA3E9A2838457100D9A065 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3DCA3E9C28384A8700D9A065 /* PictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3DCA3E9228383BB400D9A065 /* Info.plist */,
 				3DCA3E9828383CB200D9A065 /* DataManager.swift */,
 				3DCA3E9A2838457100D9A065 /* TableViewController.swift */,
+				3DCA3E9C28384A8700D9A065 /* PictViewController.swift */,
 			);
 			path = Gaga;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCA3E9D28384A8700D9A065 /* PictViewController.swift in Sources */,
 				3DCA3E8928383BAF00D9A065 /* ViewController.swift in Sources */,
 				3DCA3E9928383CB200D9A065 /* DataManager.swift in Sources */,
 				3DCA3E8528383BAF00D9A065 /* AppDelegate.swift in Sources */,
