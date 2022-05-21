@@ -8,11 +8,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    var a_i = UIActivityIndicatorView()
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtPass: UITextField!
     
     @IBAction func btnEntrarTouch (_ sender: Any) {
+        // TODO: Agregar validaciones a los campos
+        a_i.startAnimating()
         // Autenticación contra un Backend. Usando la clase nativa URLSession
         if let url = URL(string:"http://janzelaznog.com/DDAM/iOS/WS/login.php") {
             var request = URLRequest(url: url)
@@ -25,18 +27,28 @@ class LoginViewController: UIViewController {
                     print ("ocurrio un error \(error!.localizedDescription)")
                 }
                 else {
-                    print ("todo ok")
+                    var message = ""
                     do {
                         if let dict = try JSONSerialization.jsonObject(with: bytes!, options: .allowFragments) as? [String:Any] {
                             if (dict["code"] as? String ?? "") == "200" {
                                 DispatchQueue.main.async {
+                                    self.a_i.stopAnimating()
                                     self.performSegue(withIdentifier: "goHome", sender: nil)
                                 }
+                            }
+                            else {
+                                message = dict["message"] as? String ?? "Response error"
                             }
                         }
                     }
                     catch {
-                        print ("error al convertir a JSON \(error.localizedDescription)")
+                        message = "error al convertir a JSON \(error.localizedDescription)"
+                    }
+                    DispatchQueue.main.async {
+                        self.a_i.stopAnimating()
+                        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                 }
             }
@@ -80,8 +92,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        a_i.style = .large
+        a_i.color = .red
+        a_i.hidesWhenStopped = true
+        a_i.center = self.view.center
+        self.view.addSubview(a_i)
     }
     
 
