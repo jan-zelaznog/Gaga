@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="01u-hg-zde">
             <objects>
-                <viewController id="A5h-db-6gO" sceneMemberID="viewController">
+                <viewController id="A5h-db-6gO" customClass="LoginViewController" customModule="Gaga" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ktf-sx-3Yp"/>
                         <viewControllerLayoutGuide type="bottom" id="GdM-Yy-AZq"/>
@@ -62,6 +62,9 @@
                                 <state key="normal" title="INICIAR SESIÓN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnEntrarTouch:" destination="A5h-db-6gO" eventType="touchUpInside" id="QC6-76-KeR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqm-9w-Pli">
                                 <rect key="frame" x="84.5" y="717" width="245" height="32"/>
@@ -95,10 +98,15 @@
                             <constraint firstItem="yfd-dA-ZWq" firstAttribute="top" secondItem="9I7-OT-UP3" secondAttribute="bottom" constant="-19" id="nmE-bz-0uz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtPass" destination="yfd-dA-ZWq" id="O1q-Jl-8h3"/>
+                        <outlet property="txtUser" destination="pY9-si-aIl" id="J5p-XI-iHQ"/>
+                        <segue destination="Qep-RB-93k" kind="presentation" identifier="goHome" modalPresentationStyle="fullScreen" id="sPZ-4G-hOG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4R-Jt-n1X" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-987" y="-40"/>
+            <point key="canvasLocation" x="10" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -113,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="84"/>
+            <point key="canvasLocation" x="3672" y="-522"/>
         </scene>
         <!--Lady Gaga-->
         <scene sceneID="8eb-hZ-SBg">

@@ -17,6 +17,7 @@
 		3DCA3E9B2838457100D9A065 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9A2838457100D9A065 /* TableViewController.swift */; };
 		3DCA3E9D28384A8700D9A065 /* PictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9C28384A8700D9A065 /* PictViewController.swift */; };
 		3DCA3E9F28386BFA00D9A065 /* USER_DATA.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9E28386BFA00D9A065 /* USER_DATA.json */; };
+		3DCA3EA1283871BF00D9A065 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3EA0283871BF00D9A065 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3DCA3E9A2838457100D9A065 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3DCA3E9C28384A8700D9A065 /* PictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictViewController.swift; sourceTree = "<group>"; };
 		3DCA3E9E28386BFA00D9A065 /* USER_DATA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = USER_DATA.json; sourceTree = "<group>"; };
+		3DCA3EA0283871BF00D9A065 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				3DCA3E9828383CB200D9A065 /* DataManager.swift */,
 				3DCA3E9A2838457100D9A065 /* TableViewController.swift */,
 				3DCA3E9C28384A8700D9A065 /* PictViewController.swift */,
+				3DCA3EA0283871BF00D9A065 /* LoginViewController.swift */,
 			);
 			path = Gaga;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCA3EA1283871BF00D9A065 /* LoginViewController.swift in Sources */,
 				3DCA3E9D28384A8700D9A065 /* PictViewController.swift in Sources */,
 				3DCA3E8928383BAF00D9A065 /* ViewController.swift in Sources */,
 				3DCA3E9928383CB200D9A065 /* DataManager.swift in Sources */,
