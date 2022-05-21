@@ -78,6 +78,7 @@ class PictViewController: UIViewController {
         // 3. si el archivo existe, lo cargamos en el imageview y se regresa true
         
         // 4. si el archivo no existe se regresa false.
+        return false
     }
     
     func guardaImagen(_ bytes:Data, _ nombre:String) {

@@ -16,6 +16,7 @@
 		3DCA3E9928383CB200D9A065 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9828383CB200D9A065 /* DataManager.swift */; };
 		3DCA3E9B2838457100D9A065 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9A2838457100D9A065 /* TableViewController.swift */; };
 		3DCA3E9D28384A8700D9A065 /* PictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9C28384A8700D9A065 /* PictViewController.swift */; };
+		3DCA3E9F28386BFA00D9A065 /* USER_DATA.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DCA3E9E28386BFA00D9A065 /* USER_DATA.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3DCA3E9828383CB200D9A065 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3DCA3E9A2838457100D9A065 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3DCA3E9C28384A8700D9A065 /* PictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictViewController.swift; sourceTree = "<group>"; };
+		3DCA3E9E28386BFA00D9A065 /* USER_DATA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = USER_DATA.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		3DCA3E8328383BAF00D9A065 /* Gaga */ = {
 			isa = PBXGroup;
 			children = (
+				3DCA3E9E28386BFA00D9A065 /* USER_DATA.json */,
 				3DCA3E8428383BAF00D9A065 /* AppDelegate.swift */,
 				3DCA3E8628383BAF00D9A065 /* SceneDelegate.swift */,
 				3DCA3E8828383BAF00D9A065 /* ViewController.swift */,
@@ -136,6 +139,7 @@
 			files = (
 				3DCA3E9128383BB400D9A065 /* LaunchScreen.storyboard in Resources */,
 				3DCA3E8E28383BB400D9A065 /* Assets.xcassets in Resources */,
+				3DCA3E9F28386BFA00D9A065 /* USER_DATA.json in Resources */,
 				3DCA3E8C28383BAF00D9A065 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
