@@ -6,18 +6,40 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Agregar boton para cerrar sesión
+        let btn = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), style: .plain, target: self, action: #selector(salir))
+        self.navigationItem.rightBarButtonItem = btn
     }
+
+    
+    @objc func salir() {
+        print ("cerrar sesion")
+        // TODO: Confirmar si de verdad quiere cerrar sesion
+        let alert = UIAlertController(title: "", message: "Desea salir de la App?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "NO", style:.cancel, handler: nil))
+        let btnNo = UIAlertAction(title: "SI", style:.destructive) { action in
+            do {
+                try Auth.auth().signOut()
+                // Obtenemos una referencia al SceneDelegate:
+                // Podria haber mas de una escena en iPad OS o en Mac OS
+                let escena = UIApplication.shared.connectedScenes.first
+                let sd = escena?.delegate as! SceneDelegate
+                sd.cambiarVistaA("")
+            }
+            catch {
+                
+            }
+        }
+        alert.addAction(btnNo)
+        self.present(alert, animated: true, completion: nil)
+    }
+
 
     // MARK: - Table view data source
 
